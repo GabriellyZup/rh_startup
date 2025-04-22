@@ -79,3 +79,8 @@ celerybeat-schedule
 # virtualenv
 .venv/
 pyvenv.cfg
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
