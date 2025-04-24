@@ -9,6 +9,7 @@ class Funcionario(ABC):
     def calcular_bonus(self):
         pass
 
+    # Métodos públicos exigidos pelo desafio
     def get_nome(self):
         return self._nome
 
@@ -22,13 +23,12 @@ class Funcionario(ABC):
 
 class FuncionarioComum(Funcionario):
     def calcular_bonus(self):
-        return self._salario * 0.10
+        return self.get_salario() * 0.10
 
 class Gerente(Funcionario):
     def __init__(self, nome, salario, bonus_adicional):
         super().__init__(nome, salario)
-        self.bonus_adicional = bonus_adicional
+        self.bonus_adicional = bonus_adicional  # Sem validação (não exigido)
 
     def calcular_bonus(self):
-        return self._salario * 0.20 + self.bonus_adicional
-    
+        return self.get_salario() * 0.20 + self.bonus_adicional
