@@ -1,5 +1,5 @@
-# Use a imagem base do Python com Alpine
-FROM python:3.9-alpine
+# Use a imagem base do Python 3.12 com Alpine
+FROM python:3.12-alpine 
 
 # Instale as dependências do sistema necessárias
 RUN apk add --no-cache gcc musl-dev libffi-dev
